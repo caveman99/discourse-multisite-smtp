@@ -1,3 +1,3 @@
-# discourse-another-smtp
+# discourse-multisite-smtp
 
-Another smtp server originally for fucking outlook who banned my main smtp server
+Have SMTP settings in the GUI for multisite installs.
