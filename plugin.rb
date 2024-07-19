@@ -20,6 +20,8 @@ after_initialize do
       message.delivery_method.settings[:port] = SiteSetting.discourse_multisite_email_smtp_port
       message.delivery_method.settings[:password] = SiteSetting.discourse_multisite_email_smtp_password
       message.delivery_method.settings[:user_name] = SiteSetting.discourse_multisite_email_smtp_username
+      message.delivery_method.settings[:enable_starttls] = true
+      message.delivery_method.settings[:enable_starttls_auto] = true
     end
   
   end
