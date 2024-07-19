@@ -2,7 +2,7 @@
 
 # name: discourse-multisite-smtp
 # about: A plugin to enable SMTP settings for each multisite
-# version: 0.0.2
+# version: 0.0.3
 # authors: Lhc_fl, caveman99
 # url: https://github.com/caveman99/discourse-multisite-smtp
 # required_version: 3.0.0
@@ -14,6 +14,7 @@ after_initialize do
   DiscourseEvent.on(:before_email_send) do |*params|
 
     if SiteSetting.discourse_multisite_email_enabled
+      message, type = *params
       message.delivery_method.settings[:authentication] = SiteSetting.discourse_multisite_email_smtp_authentication_mode
       message.delivery_method.settings[:address] = SiteSetting.discourse_multisite_email_smtp_address
       message.delivery_method.settings[:port] = SiteSetting.discourse_multisite_email_smtp_port
