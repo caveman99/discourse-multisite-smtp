@@ -2,7 +2,7 @@
 
 # name: discourse-multisite-smtp
 # about: A plugin to enable SMTP settings for each multisite
-# version: 0.0.3
+# version: 0.0.4
 # authors: Lhc_fl, caveman99
 # url: https://github.com/caveman99/discourse-multisite-smtp
 # required_version: 3.0.0
